@@ -1,0 +1,22 @@
+<form [formGroup]="saveform" (ngSubmit)="saveSupplier()">
+    <div class="w-25 p-3">
+    
+    <div class="form-outline mb-4">
+        <label class="form-label">Supplier Id</label>
+      <input type="text"class="form-control" formControlName="supplierId"/>
+    </div>
+  
+    <div class="form-outline mb-4">
+        <label class="form-label">Name</label>
+      <input type="text"class="form-control" formControlName="supplierName"/>
+    </div>
+  
+    <div class="form-outline mb-4">
+        <label class="form-label">Contact</label>
+      <input type="text"class="form-control" formControlName="supplierContact" />
+    </div>
+
+    <button type="submit" class="btn btn-primary w-25">Save</button>
+    </div>
+
+</form>

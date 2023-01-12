@@ -1,0 +1,23 @@
+
+<div class="w-50 mx-auto">
+    <table class="table shadow">
+        <thead class="table-warning">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">SUPPLIER NAME</th>
+            <th scope="col">SUPPLIER CONTACT</th>
+            <th scope="col">EDIT</th>
+            <th scope="col">DELETE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let supplier of supplierlist">
+            <th scope="row">{{supplier.supplierId}}</th>
+            <td scope="row">{{supplier.supplierName}}</td>
+            <td scope="row">{{supplier.supplierContact}}</td>
+            <td scope="row"><i class="fa fa-pencil-square-o btn" aria-hidden="true" [routerLink]="['updatesupplier']" [state]="supplier"></i></td>
+            <td scope="row"><i class="fa fa-trash-o btn" aria-hidden="true" (click)="deleteSupplier(supplier)"></i></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>

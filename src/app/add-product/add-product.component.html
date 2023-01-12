@@ -1,0 +1,30 @@
+<form [formGroup]="saveform" (ngSubmit)="saveProduct()">
+    <div class="w-25 p-3">
+    
+    <div class="form-outline mb-4">
+        <label class="form-label">Product Id</label>
+      <input type="text"class="form-control" formControlName="productId"/>
+    </div>
+  
+    <div class="form-outline mb-4">
+        <label class="form-label">Name</label>
+      <input type="text"class="form-control" formControlName="productName"/>
+    </div>
+  
+    <div class="form-outline mb-4">
+        <label class="form-label">Price</label>
+      <input type="text"class="form-control" formControlName="productPrice" />
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect01">Supplier</label>
+      </div>
+      <select class="custom-select" formControlName="supplier">
+        <option *ngFor="let sup of supplierlist"  [ngValue]="sup">{{sup.supplierName}}</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary w-25">Save</button>
+    </div>
+
+</form>
